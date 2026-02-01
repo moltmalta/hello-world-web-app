@@ -3,25 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
+    <title>HELLO WORLD</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap');
+        
         body {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #0f0f0f;
+            color: #ff3e3e;
+            font-family: 'Inter', -apple-system, sans-serif;
+            overflow: hidden;
         }
+
         h1 {
-            font-size: 4rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            font-size: clamp(4rem, 15vw, 12rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -0.05em;
+            margin: 0;
+            text-align: center;
+            line-height: 0.9;
+            filter: drop-shadow(0 0 30px rgba(255, 62, 62, 0.3));
+        }
+
+        /* Strong modern vibe */
+        h1 span {
+            display: block;
         }
     </style>
 </head>
 <body>
-    <h1>Hello World!</h1>
+    <h1><span>HELLO</span><span>WORLD</span></h1>
 </body>
 </html>
