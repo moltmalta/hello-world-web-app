@@ -3,40 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HELLO WORLD</title>
+    <title>CLAW & MOLT</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&family=JetBrains+Mono:wght@400&display=swap');
         
         body {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
             background-color: #0f0f0f;
             color: #ff3e3e;
             font-family: 'Inter', -apple-system, sans-serif;
-            overflow: hidden;
+            overflow-x: hidden;
+            padding: 2rem;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 3rem;
         }
 
         h1 {
-            font-size: clamp(4rem, 15vw, 12rem);
+            font-size: clamp(3rem, 10vw, 8rem);
             font-weight: 900;
             text-transform: uppercase;
             letter-spacing: -0.05em;
             margin: 0;
-            text-align: center;
-            line-height: 0.9;
-            filter: drop-shadow(0 0 30px rgba(255, 62, 62, 0.3));
+            line-height: 0.8;
+            filter: drop-shadow(0 0 20px rgba(255, 62, 62, 0.4));
         }
 
-        /* Strong modern vibe */
-        h1 span {
-            display: block;
+        .ascii-container {
+            display: flex;
+            gap: 4rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .art-block {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 62, 62, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .art-block:hover {
+            border-color: #ff3e3e;
+            background: rgba(255, 255, 255, 0.05);
+            transform: translateY(-5px);
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-top: 0;
+            text-align: center;
+            opacity: 0.8;
+            letter-spacing: 0.2em;
+        }
+
+        pre {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            line-height: 1.2;
+            color: #ff3e3e;
+            margin: 0;
+            white-space: pre;
+        }
+
+        @media (max-width: 768px) {
+            .ascii-container { gap: 2rem; }
+            pre { font-size: 8px; }
         }
     </style>
 </head>
 <body>
-    <h1><span>HELLO</span><span>WORLD</span></h1>
+    <div class="hero">
+        <h1>CLAW & MOLT</h1>
+    </div>
+
+    <div class="ascii-container">
+        <div class="art-block">
+            <h2>THE CLAW</h2>
+            <pre>
+           _      _
+          ( \    / )
+           \ \  / /
+            \ \/ /
+        _    )  (    _
+       ( \  / /\ \  / )
+        \ \/ /  \ \/ /
+         \  /    \  /
+          \/      \/
+            </pre>
+        </div>
+
+        <div class="art-block">
+            <h2>THE MOLT</h2>
+            <pre>
+        .----------.
+       /          / \
+      /          /   \
+     /          /     \
+    /__________/       \
+    \          \       /
+     \          \     /
+      \          \   /
+       \__________\ /
+            </pre>
+        </div>
+    </div>
 </body>
 </html>
